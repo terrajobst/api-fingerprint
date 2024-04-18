@@ -18,8 +18,8 @@ We have various static analysis tools that report information about .NET APIs.
 We often want to correlate outputs from different tools but this is virtually
 impossible because each tool differs in the way it represents APIs.
 
-For example, let's say a tool reports about my usage of `List<Customer>.Add()`.
-There are various ways this can be expressed:
+For example, let's say a tool reports about the usage of
+`List<Customer>.Add(Customer)`. There are various ways this can be expressed:
 
 * `List<T>.Add(T)`
 * `List<Customer>.Add(Customer)`
@@ -33,25 +33,26 @@ frameworks put the same APIs in different assemblies). It's often referred to
 as the documentation id, or doc id. It's the format the compilers use when
 emitting the documentation XML files. It's documented [here][doc-id].
 
-For the above example, the doc id would look like this:
+For the above example, the doc id looks like this:
 
 * `M:System.Collections.Generic.List{Contoso.Models.Customer}(Contoso.Models.Customer)`
 
 The general format is using namespace-qualified type names (omitting assembly
-information) which makes them quite verbose. This is often no prohibitively
+information) which makes them quite verbose. This is often prohibitively
 expensive when reporting large amounts of APIs. In some cases it also
-complicates the data storage as most system put limits on how long a value can
-be when generating and index (SQL Server has a 1700 byte limitation). Some of
-the documentation ids generated for .NET platform APIs exceed that.
+complicates the data storage as many systems put limits on how large a value can
+be when generating an index (for example, SQL Server has a 1700 byte
+limitation). Some of the documentation ids generated for .NET platform APIs
+exceed that.
 
 ## The solution
 
-Instead of using the documentation ID directly, we use a hash-derived GUID. That
-ensures uniformity in size of the fingerprint while still practically being
-unique.
+Instead of using the documentation ID directly, we use a hash-derived GUID (16
+bytes). That ensures uniformity in size of the fingerprint while still
+practically being unique.
 
-This approach has been used for years by the .NET team for various assets, be that
-the documentation platform or the [API Catalog].
+This approach has been used for many years by the .NET team for various assets,
+including the documentation platform and the [API Catalog].
 
 ## Format
 
