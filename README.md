@@ -7,10 +7,10 @@ generics.
 
 This repo provides implementations for various metadata readers:
 
-* Roslyn (C#/VB compilers)
-* Reflection / MetadataLoadContext
-* Mono Cecil
-* Microsoft.Cci
+* [Roslyn (C#/VB compilers)][impl-roslyn]
+* [Mono Cecil][impl-cecil]
+* [Microsoft CCI][impl-cci]
+* Reflection / MetadataLoadContext (TBD)
 
 ## The Problem
 
@@ -85,3 +85,6 @@ that look like instance methods.
 
 [doc-id]: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/documentation-comments#d4-processing-the-documentation-file
 [API Catalog]: https://apisof.net
+[impl-roslyn]: src/Terrajobst.ApiFingerprint.Roslyn/ApiFingerprint.cs
+[impl-cecil]: src/Terrajobst.ApiFingerprint.Cecil/ApiFingerprint.cs 
+[impl-cci]: src/Terrajobst.ApiFingerprint.Cci/ApiFingerprint.cs
