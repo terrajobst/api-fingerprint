@@ -19,7 +19,7 @@ We often want to correlate outputs from different tools but this is virtually
 impossible because each tool differs in the way it represents APIs.
 
 For example, let's say a tool reports about my usage of `List<Customer>.Add()`.
-There are various ways this can expressed:
+There are various ways this can be expressed:
 
 * `List<T>.Add(T)`
 * `List<Customer>.Add(Customer)`
@@ -52,6 +52,36 @@ unique.
 
 This approach has been used for years by the .NET team for various assets, be that
 the documentation platform or the [API Catalog].
+
+## Format
+
+An API fingerprint is the GUID derived from the MD5 hash of the UTF8 encoded
+documentation id.
+
+If the API is an instantiated generic type, an instantiated generic method, or a
+member of an instantiated generic type, the fingerprint shall be computed for
+its original (uninstantiated) generic form. For example, the fingerprint for
+`List<Customer>` is the same as for `List<T>`).
+
+> [!NOTE]
+>
+> Please note that this **doesn't mean** that types of method parameters should
+> be reduced to their original form. A non-generic method that takes parameters
+> that are instantiated generic types should be interpreted as-is, otherwise
+> overloading based on different instantiations would be indistinguishable.
+> 
+> For example, each overload of `M` has its own fingerprint.
+> ```C#
+> class C {
+>     void M(List<Customer> customers) { }
+>     void M(List<int> customerIds) { }
+> }
+> ```
+
+The API fingerprint for an extension method is the same as it is for the static
+definition of the extension method. This is mostly relevant in cases of static
+analysis tools like Roslyn which produce synthetic symbols for extension methods
+that look like instance methods.
 
 [doc-id]: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/documentation-comments#d4-processing-the-documentation-file
 [API Catalog]: https://apisof.net
