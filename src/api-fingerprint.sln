@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terrajobst.ApiFingerprint.Roslyn", "Terrajobst.ApiFingerprint.Roslyn\Terrajobst.ApiFingerprint.Roslyn.csproj", "{49F28650-B995-44C7-A2A9-1056B34D3710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terrajobst.ApiFingerprint.Cci", "Terrajobst.ApiFingerprint.Cci\Terrajobst.ApiFingerprint.Cci.csproj", "{F833F5C9-9E33-4B6A-9A49-08EDB868988C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terrajobst.ApiFingerprint.Cecil", "Terrajobst.ApiFingerprint.Cecil\Terrajobst.ApiFingerprint.Cecil.csproj", "{20389192-B5F1-4B30-94BF-99E9A853533D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terrajobst.ApiFingerprint.Tests", "Terrajobst.ApiFingerprint.Tests\Terrajobst.ApiFingerprint.Tests.csproj", "{A1DBFDE7-B71A-4F23-A0B3-BEA1C7C88C62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49F28650-B995-44C7-A2A9-1056B34D3710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F28650-B995-44C7-A2A9-1056B34D3710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F28650-B995-44C7-A2A9-1056B34D3710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F28650-B995-44C7-A2A9-1056B34D3710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F833F5C9-9E33-4B6A-9A49-08EDB868988C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F833F5C9-9E33-4B6A-9A49-08EDB868988C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F833F5C9-9E33-4B6A-9A49-08EDB868988C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F833F5C9-9E33-4B6A-9A49-08EDB868988C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20389192-B5F1-4B30-94BF-99E9A853533D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20389192-B5F1-4B30-94BF-99E9A853533D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20389192-B5F1-4B30-94BF-99E9A853533D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20389192-B5F1-4B30-94BF-99E9A853533D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1DBFDE7-B71A-4F23-A0B3-BEA1C7C88C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1DBFDE7-B71A-4F23-A0B3-BEA1C7C88C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1DBFDE7-B71A-4F23-A0B3-BEA1C7C88C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1DBFDE7-B71A-4F23-A0B3-BEA1C7C88C62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

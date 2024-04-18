@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <PackageReference Include="Basic.Reference.Assemblies.Net70"/>
+        <PackageReference Include="Microsoft.Cci.Extensions"/>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp"/>
+        <PackageReference Include="Microsoft.Composition" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Terrajobst.ApiFingerprint.Cci\Terrajobst.ApiFingerprint.Cci.csproj" />
+      <ProjectReference Include="..\Terrajobst.ApiFingerprint.Cecil\Terrajobst.ApiFingerprint.Cecil.csproj" />
+      <ProjectReference Include="..\Terrajobst.ApiFingerprint.Roslyn\Terrajobst.ApiFingerprint.Roslyn.csproj" />
+    </ItemGroup>
+</Project>
